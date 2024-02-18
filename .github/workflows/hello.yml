@@ -3,6 +3,10 @@ on: push
 
 jobs:
   build:
+    name: build
     runs-on: ubuntu-latest
     steps:
-    - run: echo "hello 2/18 r3"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: echo
+        run: echo "hello 2/18 r3"
