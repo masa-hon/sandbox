@@ -1,12 +1,9 @@
-name: hello
-on: push
+name: test
+on: issues
 
 jobs:
-  build:
-    name: build
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: echo
         run: echo "hello 2/18 r3"
