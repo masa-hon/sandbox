@@ -13,5 +13,4 @@ jobs:
     steps:
       - run: |
          echo "1"
-         echo "2"
-        
+         echo "${{inputs.greeting}}}"
