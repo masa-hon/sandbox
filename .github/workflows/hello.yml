@@ -1,11 +1,9 @@
 name: test
-on: issues_comment
+on: issue_comment
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-        echo "Hello1"
-        echo "Hello2"
+      - run: echo "hello"
         
