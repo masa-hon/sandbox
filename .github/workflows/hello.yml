@@ -4,6 +4,6 @@ on: issues
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps:
-      - name: echo
-        run: echo "hello 2/18 r3"
+        run: |
+          git log -1
+          tree -a
