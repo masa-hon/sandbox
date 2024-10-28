@@ -4,6 +4,6 @@ on: issues_comment
 jobs:
   test:
     runs-on: ubuntu-latest
-        run: |
+      - run: |
           git log -1
           tree -a
