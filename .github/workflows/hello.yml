@@ -18,9 +18,9 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     env:
-      EVENT: ${{github.event}}
+      ACTOR: ${{github.event}}
     steps:
-      - run: echo "${EVENT}"
+      - run: echo "${ACTOR}"
   
   test3:
     runs-on: ubuntu-latest
