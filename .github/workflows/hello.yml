@@ -21,3 +21,9 @@ jobs:
       EVENT: ${{github.actor}}
     steps:
       - run: echo ${EVENT}
+  
+  test3:
+    runs-on: ubuntu-latest
+    steps:
+     - run: ecno ${{github.actor}}
+      
