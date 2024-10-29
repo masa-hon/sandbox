@@ -18,4 +18,4 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "$((github.actor))" 
+      - run: echo "$((github.event))" 
