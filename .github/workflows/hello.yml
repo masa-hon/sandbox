@@ -13,11 +13,11 @@ jobs:
     steps:
       - run: |
          echo "1"
-         echo "${{ inputs.greeting }}"
+         echo "${{inputs.greeting}}"
          
   test2:
     runs-on: ubuntu-latest
     env:
-      EVENT:${{github.actor}}
+      EVENT: ${{github.actor}}
     steps:
-      - run: echo ${{ EVENT }}
+      - run: echo ${EVENT}
