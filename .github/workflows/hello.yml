@@ -25,5 +25,5 @@ jobs:
   test3:
     runs-on: ubuntu-latest
     steps:
-     - run: ecno ${{github.actor}}
+     - run: echo ${{github.actor}}
       
