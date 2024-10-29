@@ -7,10 +7,15 @@ on:
         default: hello
         required: true
         description: A cheerful word
-jobs:
-  test:
+jobs1:
+  test1:
     runs-on: ubuntu-latest
-      steps:
+    steps:
       - run: |
          echo "1"
          echo "${{inputs.greeting}}"
+jpbs2:
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      -run:echo "$((github.actor))" 
