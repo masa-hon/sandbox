@@ -17,5 +17,7 @@ jobs:
          
   test2:
     runs-on: ubuntu-latest
+    env:
+      EVENT:${{github.actor}}
     steps:
-      - run: echo $(( github.event ))
+      - run: echo ${{ EVENT }}
