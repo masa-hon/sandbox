@@ -14,7 +14,7 @@ jobs1:
       - run: |
          echo "1"
          echo "${{inputs.greeting}}"
-jpbs2:
+         
   test2:
     runs-on: ubuntu-latest
     steps:
