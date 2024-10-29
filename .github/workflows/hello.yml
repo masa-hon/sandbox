@@ -9,7 +9,7 @@ on:
         description: A cheerful word
 jobs:
   test:
-    runs-on: ubuntu-latest
+    run-on: ubuntu-latest
     steps:
       - run: |
          echo "1"
