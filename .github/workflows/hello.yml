@@ -20,7 +20,7 @@ jobs:
     env:
       ACTOR: ${{github.event}}
     steps:
-      - run: echo "${ACTOR}"
+      - run: echo ${ACTOR}
   
   test3:
     runs-on: ubuntu-latest
