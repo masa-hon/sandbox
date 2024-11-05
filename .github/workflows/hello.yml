@@ -26,4 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{github.actor}}"
-      
+  test4:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv | grep 'LITERAL'
+    env:
+      LITELAL_NULL: ${{null}}
