@@ -26,9 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{github.actor}}"
+      
   test4:
     runs-on: ubuntu-latest
     steps:
-      - run: "${LITERAL_NULL}"
+      - run: "${LITERAL_STRING}"
     env:
-      LITERAL_NULL: ${{null}}
+      LITERAL_STRING: world
