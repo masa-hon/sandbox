@@ -30,7 +30,7 @@ jobs:
   test4:
     runs-on: ubuntu-latest
     env:
-      LITERAL_STRING: world
+      LITERAL_STRING: ${{'hoge'}}
     steps:
       - run: "${LITERAL_STRING}"
       
