@@ -29,6 +29,6 @@ jobs:
   test4:
     runs-on: ubuntu-latest
     steps:
-      - run: printenv | grep 'LITERAL'
+      - run: "${LITERAL_NULL}"
     env:
-      LITELAL_NULL: ${{null}}
+      LITERAL_NULL: ${{null}}
