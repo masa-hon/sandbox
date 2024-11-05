@@ -33,5 +33,4 @@ jobs:
       LITERAL_STRING: world
     steps:
       - run: "${LITERAL_STRING}"
-    env:
-      LITERAL_STRING: world
+      
