@@ -33,4 +33,6 @@ jobs:
       LIT: ${{'hoge'}}
     steps:
       - run: echo "${LIT}"
-    
+      - env:
+          LIT: ${{'hoge2'}}
+        run: echo "${LIT}"  
