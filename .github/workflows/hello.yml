@@ -29,6 +29,8 @@ jobs:
       
   test4:
     runs-on: ubuntu-latest
+    env:
+      LITERAL_STRING: world
     steps:
       - run: "${LITERAL_STRING}"
     env:
