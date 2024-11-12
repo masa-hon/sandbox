@@ -20,7 +20,7 @@ jobs:
     env:  
       BRANCH: ${{'main'}}       
     steps:
-      - run: echo BRANCH
+      - run: echo "${BRANCH}"
   
   test3:
     runs-on: ubuntu-latest
