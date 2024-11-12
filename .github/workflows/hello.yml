@@ -17,10 +17,9 @@ jobs:
          
   test2:
     runs-on: ubuntu-latest
-    env:
-      ACTOR: ${{github.actor}}
-    steps:
-      - run: echo "${ACTOR}"
+    steps: 
+      - run: echo "hoge"
+      - run: echo "piyo"
   
   test3:
     runs-on: ubuntu-latest
