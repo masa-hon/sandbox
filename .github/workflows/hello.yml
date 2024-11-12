@@ -14,7 +14,11 @@ jobs:
       - run: |
          echo "1"
          echo "${{inputs.greeting}}"
-        
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "1"
+      - run: echo "2"         
   
   test3:
     runs-on: ubuntu-latest
