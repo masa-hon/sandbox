@@ -14,11 +14,13 @@ jobs:
       - run: |
          echo "1"
          echo "${{inputs.greeting}}"
+         
   test2:
     runs-on: ubuntu-latest
+    env:  
+      BRANCH: ${{'main'}}       
     steps:
-      - run: echo "1"
-      - run: echo "2"         
+      - run: echo BRANCH
   
   test3:
     runs-on: ubuntu-latest
