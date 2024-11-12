@@ -23,7 +23,7 @@ jobs:
       - run: echo "${BRANCH}"
       - env:
           BRANCH: ${{'sub'}}
-          run: echo "${BRANCH}"
+        run: echo "${BRANCH}"
   
   test3:
     runs-on: ubuntu-latest
