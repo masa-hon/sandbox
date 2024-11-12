@@ -21,12 +21,4 @@ jobs:
     steps:
       - run: echo "${{github.actor}}"
       
-  test4:
-    runs-on: ubuntu-latest
-    env:
-      LIT: ${{'hoge'}}
-    steps:
-      - run: echo "${LIT}"
-      - env:
-          LIT: ${{'hoge2'}}
-        run "${LIT}"  
+
