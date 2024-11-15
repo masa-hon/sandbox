@@ -17,7 +17,8 @@ jobs:
          
   test2:
     runs-on: ubuntu-latest
-    env: 
-      hoge: ${{ format('{0}, {1}', 'Hi' , 'world' )}}
     steps: 
-      - run: "${hoge}"
+      - run: printenv | grep '_FUNC'
+      - env: 
+          hoge: ${{ format('{0}, {1}', 'Hi' , 'world' )}}
+        run: "${hoge}"
