@@ -19,5 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - run: echo hoge
-        env:
+      - env:
           HOGE: ${{format('{0},{1}','hi','hoge')}}
+        run: "${HOGE}"
