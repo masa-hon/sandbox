@@ -20,4 +20,4 @@ jobs:
     env: 
       hoge: ${{format('{0}, {1}', 'Hi' , 'world')}}
     steps: 
-      - run:  "${hoge}"
+      - run: "${hoge}"
