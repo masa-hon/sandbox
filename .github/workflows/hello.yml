@@ -21,4 +21,4 @@ jobs:
       - run: echo hoge
       - env:
           HOGE: ${{format('{0},{1}','hi','hoge')}}
-      
+        run: echo "${HOGE}"
