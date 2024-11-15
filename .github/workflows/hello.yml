@@ -18,4 +18,8 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     steps: 
-      - run: printenv | grep '_FUNC'
+      - run: |
+          echo hoge1
+          echo "hoge1"
+          echo ${{'hoge'}}
+          
