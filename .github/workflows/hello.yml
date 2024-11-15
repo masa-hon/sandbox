@@ -21,3 +21,9 @@ jobs:
       - env:
           HOGE: ${{format('{0},{1}','hi','hoge')}}
         run: echo "${HOGE}"
+        
+  test3:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "${{format('{0},{1}','hi','hoge')}}"
+        
