@@ -12,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-         echo "1"
-         echo "${{inputs.greeting}}"
-         echo "${CONTEXT}"
-         
+          echo "1"
+          echo "${{inputs.greeting}}"
+      - env:
+          CONTEXT: ${{toJSON(github)}}  
+        run: echo "${CONTEXT}"
+                  
   test2:
     runs-on: ubuntu-latest
     steps: 
