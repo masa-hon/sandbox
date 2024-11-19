@@ -4,23 +4,19 @@ on:
     inputs: 
       greeting:
         type: string
-        default: hello
+        default: test_yymmdd
         required: true
         description: A cheerful word
 jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-#      - run: |
-#          echo "1"
-#          echo "${{inputs.greeting}}"
-      - env:
-#          CONTEXT: ${{toJSON(github)}}  
+      - env: |
+          CONTEXT: ${{toJSON(github)}}  
           HASH: ${{hashFiles('.github/workflows/*.yml')}}
-        run: echo "${HASH}"
-#          echo "${CONTEXT}"
-        
-                  
+        run: |
+          echo "${HASH}"
+          echo "${CONTEXT}"               
   test2:
     runs-on: ubuntu-latest
     steps: 
