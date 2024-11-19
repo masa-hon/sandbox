@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - env:
-          HASH: ${{hashFiles('.github/workflows/*.yml')}}
+          HASH: ${{hashFiles('sandbox/.github/workflows/*.yml')}}
         run: echo "${HASH}"  
     
           
