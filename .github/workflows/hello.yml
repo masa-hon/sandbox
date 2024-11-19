@@ -12,11 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env: 
-          CONTEXT: ${{toJSON(github)}}  
+          CONTEXT: ${{toJSON(github)}} 
+        run: echo "${CONTEXT}"
+
+  test1-2:
+    runs-on: ubuntu-latest
+    steps: 
+      - env:
           HASH: ${{hashFiles('.github/workflows/*.yml')}}
-        run: |
-          echo "${HASH}"
-          echo "${CONTEXT}"               
+        run: echo "${HASH}"  
+    
+          
   test2:
     runs-on: ubuntu-latest
     steps: 
