@@ -16,7 +16,10 @@ jobs:
           echo "${{inputs.greeting}}"
       - env:
           CONTEXT: ${{toJSON(github)}}  
-        run: echo "${CONTEXT}"
+          HASH: ${{hashFiles('.github/workflows/*.yml')}}
+        run: | 
+          echo "${CONTEXT}"
+          echo "${HASH}"
                   
   test2:
     runs-on: ubuntu-latest
