@@ -11,7 +11,7 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - env: |
+      - env: 
           CONTEXT: ${{toJSON(github)}}  
           HASH: ${{hashFiles('.github/workflows/*.yml')}}
         run: |
