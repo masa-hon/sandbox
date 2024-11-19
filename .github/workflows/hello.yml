@@ -25,5 +25,5 @@ jobs:
   test3:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "${{join("hi",'"est2")}}"
+      - run: echo "${{join('hi',"test2")}}"
         
