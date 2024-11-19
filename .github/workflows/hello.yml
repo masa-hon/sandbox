@@ -11,15 +11,15 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "1"
-          echo "${{inputs.greeting}}"
+#      - run: |
+#          echo "1"
+#          echo "${{inputs.greeting}}"
       - env:
-          CONTEXT: ${{toJSON(github)}}  
+#          CONTEXT: ${{toJSON(github)}}  
           HASH: ${{hashFiles('.github/workflows/*.yml')}}
-        run: | 
-          echo "${CONTEXT}"
-          echo "${HASH}"
+        run: echo "${HASH}"
+#          echo "${CONTEXT}"
+        
                   
   test2:
     runs-on: ubuntu-latest
