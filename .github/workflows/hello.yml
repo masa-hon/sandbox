@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - run: echo "zengo check"
-        if: ${{contains(github.run_id, '12345')}}
+        if: ${{contains(github.run_id, '1')}}
         
   test3:
     runs-on: ubuntu-latest
