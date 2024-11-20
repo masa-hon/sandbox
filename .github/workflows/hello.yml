@@ -26,12 +26,10 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     steps: 
-      - env:
-          HOGE: ${{join('hi','test1')}}
-        run: echo "${HOGE}"
+      - run: echo "zengo check"
+        if: ${{contain(github.run_id, '1')}}
         
   test3:
     runs-on: ubuntu-latest
     steps: 
       - run: echo "${{join('hi','test2')}}"
-        
