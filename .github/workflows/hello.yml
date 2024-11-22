@@ -15,12 +15,6 @@ jobs:
           CONTEXT: ${{toJSON(github)}} 
         run: echo "${CONTEXT}"
 
-  test1-2:
-    runs-on: ubuntu-latest
-    steps: 
-      - run: exit 1
-      - run: echo "test1-2"
-        if: ${{failure()}}
           
   test2:
     runs-on: ubuntu-latest
