@@ -31,4 +31,8 @@ jobs:
   test3:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "${{join('hi','test2')}}"
+      - id: source
+        run: echo "result=test" >> "${GITHUB_OUTPUT}"
+      - env: 
+          RESULT: ${{steps.source.output.result}}
+        run: echo "${RESULT}"
