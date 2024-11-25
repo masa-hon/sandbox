@@ -1,0 +1,13 @@
+name: Comement
+on: pull_request
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: gh pr comments "{GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}"
+        env:
+          GITHUB_TOKEN: ${{sevrets.GITHUB_TOKEN}}
