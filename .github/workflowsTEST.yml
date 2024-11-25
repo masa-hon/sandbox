@@ -18,7 +18,9 @@ jobs:
   test1-2:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${GITHUB_ACTOR}"
+      - run: |
+        echo "${GITHUB_ACTOR}"
+        echo "${GITHUB_HEAD_REF}"
           
   test2:
     runs-on: ubuntu-latest
