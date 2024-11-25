@@ -1,4 +1,4 @@
-name: Comement
+name: delete
 on: pull_request
 jobs:
   comment:
