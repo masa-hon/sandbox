@@ -16,4 +16,4 @@ jobs:
       - run: echo "${BRANCH}"
       - uses: actions/checkout@v4
         with:
-          ref: ${{env.BRANCH}}  
+          par: ${{env.BRANCH}}  
