@@ -1,0 +1,9 @@
+name: Schedule
+on:
+  schedule:
+    - cron: '*/15 * * * *' # 15分毎に起動するcron形式
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date
