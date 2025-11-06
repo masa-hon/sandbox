@@ -14,7 +14,6 @@ jobs:
       BRANCH: main
     steps:
       - run: echo "${BRANCH}"
-      - run: echo "{{env.BRAIN}}"
       - uses: actions/checkout@v4
         with:
           ref: ${{env.BRANCH}}  
