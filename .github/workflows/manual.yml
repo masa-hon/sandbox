@@ -5,7 +5,7 @@ on:
       greeting:
         type: string
         default: Hello
-        required: ture
+        required: true
         description: A Cheerful word
 jobs:
   run:
