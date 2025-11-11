@@ -1,0 +1,16 @@
+name: Status check function
+on:  
+  workflow_dispatch:
+    inputs: 
+      word:
+        type: choice
+        options:
+          - yes
+          - no
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+      - run: echo "Hello"
+        if: ${{ failure() }} 
