@@ -1,0 +1,19 @@
+name: GITHUB_OUTPUT
+on:  
+  workflow_dispatch:
+    inputs: 
+      word:
+        type: choice
+        options:
+          - yes
+          - no
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+    - id: source
+      run: echo "result=Hello" >> "GITHUB_OUTPUT"
+    - env:
+        RESULT: ${{steps.source.outputs.result}}
+      run: echo "${RESULT}"
+      
