@@ -1,10 +1,13 @@
 name: Comment
-on:  
-  workflow_dispatch:
-    inputs: 
-      word:
-        type: choice
-        options:
-          - yes
-          - no
-
+on: pull_request
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+      permission:
+        pull-request: write
+        contents: read
+     steps:
+       -uses: actions/checkout@v4
+       - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}"
+         env:
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
