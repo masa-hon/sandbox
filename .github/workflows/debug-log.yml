@@ -1,13 +1,7 @@
 name: Debug log
-on:  
-  workflow_dispatch:
-    inputs: 
-      word:
-        type: choice
-        options:
-          - yes
-          - no
+on: push  
 jobs: 
-  runs-on: ubuntu-latest
+  logs:  
+    runs-on: ubuntu-latest
     steps:
       - run: echo "::debug::This is a debug log"
