@@ -1,4 +1,4 @@
-package main
+package main 
 
 func EvenOrOdd(number int) string {
 	if number%2 == 0 {
@@ -7,3 +7,4 @@ func EvenOrOdd(number int) string {
 		return "odd"
 	}
 }
+# test
