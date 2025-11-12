@@ -15,4 +15,5 @@ on:
       steps:
         - uses: actions/checkout@v4
         - run |
-          docker run --rm -v "${PWD}:${PWD}" -w "${PWD}" rhysd/actionlint:lates2
+          docker run --rm -v "${PWD}:${PWD}" -w "${PWD}" rhysd/actionlint:latest
+    # test
