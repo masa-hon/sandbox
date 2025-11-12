@@ -1,6 +1,7 @@
 name: Debug log
-  workflow_dispatch:
-    inputs: 
+on:
+  workflow_dispatch
+    inputs:
       word:
         type: choice
         options:
