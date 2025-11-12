@@ -1,12 +1,5 @@
 name: Debug log
-on:
-  workflow_dispatch:
-    inputs:
-      word:
-        type: choice
-        options:
-          - yes
-          - no  
+on: push
 jobs: 
   logs:  
     runs-on: ubuntu-latest
