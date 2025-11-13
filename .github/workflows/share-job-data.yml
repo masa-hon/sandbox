@@ -14,7 +14,7 @@ jobs:
       - id: generate
         run: echo "result=Hello" >> "${GUTHUB_OUTPUT}"
     outputs:
-      result: ${{steps.generate.outputs.result}}
+      result: ${{ steps.generate.outputs.result }}
   
   after:
     runs-on: ubuntu-latest
