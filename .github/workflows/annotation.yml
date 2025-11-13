@@ -1,0 +1,17 @@
+name: Annotation
+on:  
+  workflow_dispatch:
+    inputs: 
+      word:
+        type: choice
+        required: true
+        options:
+          - yes
+          - no
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::error::This is an error"
+      - run: echo "::warning::This is a warning"
+      - run: echo ":notice:::This is a notice"
