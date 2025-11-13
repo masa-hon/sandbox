@@ -1,11 +1,18 @@
 name: Share job data
-on: push
+on:  
+  workflow_dispatch:
+    inputs: 
+      word:
+        type: choice
+        options:
+          - yes
+          - no
 jobs:
   before:
     runs-on: ubuntu-latest
     steps:
       - id: generate
-        run: echo "result=Hello" >> "${GUTHUB_OUTPUT}"
+        run: echo "result=Hello" >> "${GITHUB_OUTPUT}"
     outputs:
       result: ${{ steps.generate.outputs.result }}
   
