@@ -14,4 +14,4 @@ jobs:
     steps:
       - run: echo "::error::This is an error"
       - run: echo "::warning::This is a warning"
-      - run: echo ":notice:::This is a notice"
+      - run: echo "::notice::This is a notice"
