@@ -1,12 +1,5 @@
 name: Share job data
-on:
-  workflow_dispatch:
-    inputs: 
-      word:
-        type: choice
-        options:
-          - yes
-          - no
+on: push
 jobs:
   before:
     runs-on: ubuntu-latest
