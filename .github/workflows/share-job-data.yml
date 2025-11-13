@@ -1,0 +1,26 @@
+name: Share job data
+on:  
+  workflow_dispatch:
+    inputs: 
+      word:
+        type: choice
+        options:
+          - yes
+          - no
+jobs:
+  before:
+    runs-on: ubuntu-latest
+    steps:
+      - id: generate
+        run: echo "result=Hello" >> "${GUTHUB_OUTPUT}"
+    outputs:
+      result: $${{steps.generate.outputs.result}}
+
+  after:
+    runs-on: ubuntu-latest
+    needs: [before]
+    steps:
+      - env:
+          RESULT: ${{needs.before.outputs.result}}
+        run: echo "${RESULT}"
+  
