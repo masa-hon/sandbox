@@ -34,8 +34,10 @@ CSVから自動生成されたIssueです。
 ステップ 3: コマンドを実行する
 - 準備ができたら、以下のコマンドを実行するだけで、CSVの行数分のIssueが一括で作成され、指定したフィールド（担当者やラベルなど）も自動で反映されます。
 ```
-gh issue-bulk-create --template template.md --csv issues.csv --repo オーナー名/リポジトリ名
+gh issue-bulk-create --template template.md --csv issues.csv --repo オーナー名/リポジトリ名　✖
+gh issue-bulk-create --csv issues.csv ---template template.md 〇
 ```
+
 
 ### 方法２．シェルスクリプトで1行ずつループ
 # 1行目がヘッダーのCSVを読み込んでループ処理
