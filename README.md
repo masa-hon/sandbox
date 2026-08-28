@@ -1,5 +1,5 @@
-##個人スマホのgoogleから「github cli csvからissueをつくる fieldも含めるには？」で検索
-### 拡張機能をつかう
+## 個人スマホのgoogleから「github cli csvからissueをつくる fieldも含めるには？」で検索
+### 方法１．拡張機能をつかう
 ステップ 1: 拡張機能をインストールする
 
 ```
@@ -36,3 +36,22 @@ CSVから自動生成されたIssueです。
 ```
 gh issue-bulk-create --template template.md --csv issues.csv --repo オーナー名/リポジトリ名
 ```
+
+### 方法２．シェルスクリプトで1行ずつループ
+# 1行目がヘッダーのCSVを読み込んでループ処理
+```
+tail -n +2 issues.csv | while IFS=, read -r title assignee label component; do
+  gh issue create \
+    --title "$title" \
+    --body "コンポーネント: $component" \
+    --label "$label" \
+    --assignee "$assignee"
+done
+```
+
+### ただ、この方法はCSV内の「カンマ」や「改行」のエスケープ処理が複雑になりがちです。そのため、最初にご紹介した gh-issue-bulk-create 拡張機能を使う方法が一番安全かつ簡単でおすすめです。
+
+
+### その他
+- Project（新版Board）のカスタムフィールドを追加したい場合は、Issue作成後にGraphQL API（gh api graphql）を用いてプロジェクトアイテムの値を置き換えるステップが必要。
+- 上記を実施したい場合、GraphQL APIを組み込んだスクリプト例をご提示します
