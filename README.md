@@ -55,5 +55,17 @@ done
 
 
 ### その他
-- Project（新版Board）のカスタムフィールドを追加したい場合は、Issue作成後にGraphQL API（gh api graphql）を用いてプロジェクトアイテムの値を置き換えるステップが必要。
+- Project（新版Board）のカスタムフィールドを追加したい場合は、Issue作成後にGraphQL API（gh api graphql）を用いてプロジェクトアイテムの値を書き換えるステップが必要。
 - 上記を実施したい場合、GraphQL APIを組み込んだスクリプト例をご提示します
+
+### 来週タスク
+1. projectに紐づけたIssueをつくる
+```
+gh issue create --title "Issueのタイトル" --body "Issueの本文" --project "プロジェクト名"
+```
+2. field値などを編集する
+```
+gh project item-edit --owner <owner> --number <project-number> --id <item-id> --field "Priority" --value "High"
+```
+
+
