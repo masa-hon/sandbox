@@ -11,4 +11,4 @@ labels:
 CSVから自動生成されたIssueです。
 
 ### 対象コンポーネント
-- {{component}}
+{{component}}
