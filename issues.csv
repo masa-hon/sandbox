@@ -1,4 +1,3 @@
 ﻿title,assignee,label,component
 "ログイン画面のバグ",,"bug","Frontend"
-"APIのレスポンス遅延",,"performance","Backend"
-
+"APIのレスポンス遅延",,"bug","Backend"
