@@ -1,0 +1,42 @@
+name: バグ報告
+description: 不具合を報告するためのテンプレート
+title: "[Bug] "
+labels:
+  - bug
+  - triage
+assignees:
+  - masa-hon
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグの詳細を記入してください。
+
+  - type: input
+    id: summary
+    attributes:
+      label: 概要
+      description: バグの簡単な説明
+      placeholder: 例）画面が表示されない
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグを再現するための手順
+      placeholder: |
+        1. 〜を開く
+        2. 〜をクリックする
+        3. エラーが発生する
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待される動作
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+
