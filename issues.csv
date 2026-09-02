@@ -1,4 +1,4 @@
 ﻿title,assignee,label,component
-"ログイン画面のバグ","octocat","bug","Frontend"
-"APIのレスポンス遅延","hubot","performance","Backend"
+"ログイン画面のバグ",,"bug","Frontend"
+"APIのレスポンス遅延",,"performance","Backend"
 
