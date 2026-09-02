@@ -1,0 +1,21 @@
+name: Literals
+on: 
+  workflow_dispatch:
+    inputs:
+      greeting:
+        type: choice 
+        options:
+          - info
+          - warn
+          - error
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv | grep 'LITERAS_'
+        env:
+          LITERAS_NULL: ${{ null }}
+          LITERAS_BOOLEAN: ${{ true }}
+          LITERAS_NUMBER: ${{ 1234 }}
+          LITERAS_STRING: ${{ 'Hello' }}
+          LITERAS_OMIT_STRING: World
