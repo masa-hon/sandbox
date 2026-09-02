@@ -1,0 +1,17 @@
+name: 機能追加リクエスト
+description: 新しい機能の提案
+title: "[Feature] "
+labels:
+  - enhancement
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: 概要
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 詳細
+      description: 提案する機能の詳細を記入してください
