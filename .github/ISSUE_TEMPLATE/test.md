@@ -1,15 +1,16 @@
 ---
 name: test
 about: 'test '
-title: ''
-labels: ''
-assignees: ''
-
+title: "{{title}}"
+assignees:
+  - "{{assignee}}"
+labels:
+  - "{{label}}"
+  - "triage"
 ---
 
-## やりたいこと
+### 概要
+CSVから自動生成されたIssueです。
 
-## 問題
-
-## 期限
-
+### 対象コンポーネント
+- {{component}}
