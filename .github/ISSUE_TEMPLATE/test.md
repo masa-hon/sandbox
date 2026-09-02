@@ -1,6 +1,6 @@
 ---
 name: test
-about: 'Suggest an idea for this project '
+about: 'test '
 title: ''
 labels: ''
 assignees: ''
