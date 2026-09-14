@@ -24,6 +24,7 @@ title,assignee,label,component
 ② template.md（Issueの本文とフィールド定義）　←issueのテンプレート機能
 ```
 ---
+name: test ★必須
 title: "{{title}}"
 assignees:
   - "{{assignee}}"
